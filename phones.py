@@ -49,3 +49,41 @@ class MobilePhone(Phone):
         return self.generation
     def get_num_of_sim_slots(self):
         return self.num_of_sim_slots
+""" SmartPhone class inherits from MobilePhone class
+"""
+class SmartPhone(MobilePhone):
+    # Class property internet_conn has the same value for all instances
+    # of the class and is accessed by Class.property like 
+    # SmartPhone.internet_conn
+    internet_conn=True
+    def __init__(self,data_rate,camera_spec,screen_sensor_type
+                    ,generation,num_of_sim_slots,
+                     manufucturer,width,height,color,serial,battery_rating):
+        """ Extra properties in addition to those inheritated from
+            the parent/super class like width, height and generation
+        """
+        self.data_rate=data_rate
+        self.camera_spec=camera_spec
+        self.screen_sensor_type=screen_sensor_type
+        self.generation=generation
+        self.num_of_sim_slots=num_of_sim_slots
+        self.manufucturer=manufucturer
+        self.width=width
+        self.height=height
+        self.color=color
+        self.__serial=serial
+        self.battery_rating=battery_rating
+    # Polymorphism, a modified definition of the dial method
+    def dial(self,number,call_type):
+        if call_type=='voice':
+            print 'Voice call to '+number
+        elif call_type=='video':
+            print 'Video call to '+number
+        elif call_type=='data':
+            print 'Browsing'   
+    
+    def send_multimedia_msg(multimedia_msg,number):
+        print 'Sending '+multimedia_msg+' to '+number
+
+    def take_pictures():
+        print 'Taking Pictures'

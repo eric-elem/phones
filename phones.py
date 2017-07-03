@@ -87,3 +87,12 @@ class SmartPhone(MobilePhone):
 
     def take_pictures():
         print 'Taking Pictures'
+""" Creating objects of the above classes and accessing some methods
+"""
+desk_phone=Phone('Motorolla',20,25,'blue','6748332991',500)
+desk_phone.dial('+256707677855')
+
+# Mobile_phone object is of both type MobilePhone and Phone
+# This is polymorphism as the same object has more than one type
+mobile_phone=MobilePhone('2G',1,manufucturer,width,height,color,
+                            serial,battery_rating)

@@ -27,3 +27,25 @@ class Phone:
     # Private method defined using __ before method name
     def __update_software(self):
         print 'Updating software'
+# child class MobilePhone inherits from parent class Phone
+class MobilePhone(Phone):
+    def __init__(self,generation,num_of_sim_slots,
+                    manufucturer,width,height,color,serial,battery_rating):
+        """ Extra properties in addition to those inheritated from
+            the parent class like width and height
+        """
+        self.generation=generation
+        self.num_of_sim_slots=num_of_sim_slots
+        self.manufucturer=manufucturer
+        self.width=width
+        self.height=height
+        self.color=color
+        self.__serial=serial
+        self.battery_rating=battery_rating
+    """ Extra methods in addition to those inheritated from
+            the parent class like dial and sendText
+    """
+    def get_generation(self):
+        return self.generation
+    def get_num_of_sim_slots(self):
+        return self.num_of_sim_slots

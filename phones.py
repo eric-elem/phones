@@ -91,6 +91,7 @@ class SmartPhone(MobilePhone):
 """
 desk_phone=Phone('Motorolla',20,25,'blue','6748332991',500)
 desk_phone.dial('+256707677855')
+print desk_phone.color
 
 # Mobile_phone object is of both type MobilePhone and Phone
 # This is polymorphism as the same object has more than one type

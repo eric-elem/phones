@@ -10,7 +10,9 @@ class Phone:
             in python.
         """
         self.__serial=serial
-        self.battery_rating=battery_rating
+        # protected property declared with a single leading underscore 
+        # as _battery_rating
+        self._battery_rating=battery_rating
         """ Private method __update_software can only be called
             from within the class and not directly from an object but
             indirectly through name mangling such as 
